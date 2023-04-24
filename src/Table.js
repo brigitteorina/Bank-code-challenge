@@ -1,7 +1,8 @@
 import React from 'react'
 
 function Table({ transactions }) {
-    return (
+    return <>
+    {transactions.length>0?(
         <table className='table table-striped text-center'>
             <thead>
                 <tr>
@@ -12,24 +13,19 @@ function Table({ transactions }) {
                 </tr>
             </thead>
             <tbody>
-                {transactions.length > 0 ? (
-                    transactions.map(transaction => {
+                {transactions.map(transaction => {
                         return <tr key={transaction.id}>
                             <td>{transaction.date}</td>
                             <td>{transaction.description}</td>
                             <td>{transaction.category}</td>
                             <td>{transaction.amount}</td>
                         </tr>
-
-                    })
-                ) :<tr><td>No transactions</td></tr>
-                    
-
+                    })                            
                 }
 
             </tbody>
-        </table>
-    )
-}
+        </table>):<p className='text-secondary text-center'>No transactions</p>}
+    </>
+            }
 
 export default Table
