@@ -1,0 +1,17 @@
+.header{
+  background-color:rgb(85, 72, 168);
+  color: white;
+  text-transform: capitalize;
+  font-size: x-large;
+  font-weight: 600;
+}
+.app{
+  width: 100vw;
+  overflow: hidden;
+}
+.addTransBtn{
+  background-color: #cccccc;
+}
+form{
+  border: solid 1px #cccccc;
+}
